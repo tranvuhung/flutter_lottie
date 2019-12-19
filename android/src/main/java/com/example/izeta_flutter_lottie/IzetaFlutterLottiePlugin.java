@@ -7,7 +7,7 @@ import io.flutter.plugin.common.MethodChannel.Result;
 import io.flutter.plugin.common.PluginRegistry.Registrar;
 
 /** IzetaFlutterLottiePlugin */
-public class IzetaFlutterLottiePlugin implements MethodCallHandler {
+public class IzetaFlutterLottiePlugin { //implements MethodCallHandler
   /** Plugin registration. */
   // public static void registerWith(Registrar registrar) {
   //   final MethodChannel channel = new MethodChannel(registrar.messenger(), "izeta_flutter_lottie");

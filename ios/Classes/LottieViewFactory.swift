@@ -4,7 +4,7 @@ import Lottie
 
 
 public class LottieViewFactory : NSObject, FlutterPlatformViewFactory {
-   var animationView: AnimationView?
+   var animationView: LOTAnimationView?
    var registrarInstance : FlutterPluginRegistrar
    
    init(registrarInstance : FlutterPluginRegistrar) {

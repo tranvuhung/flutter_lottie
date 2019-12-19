@@ -6,7 +6,7 @@ public class LottieView : NSObject, FlutterPlatformView {
    let frame : CGRect
    let viewId : Int64
    
-   var animationView: LOTAnimationView?
+   var animationView: AnimationView?
    var testStream : TestStreamHandler?
    var delegates : [LOTValueDelegate]
    var registrarInstance : FlutterPluginRegistrar
@@ -39,14 +39,14 @@ public class LottieView : NSObject, FlutterPlatformView {
          let filePath = argsDict["filePath"] as? String ?? nil;
          
          if url != nil {
-            self.animationView = LOTAnimationView(contentsOf: URL(string: url!)!)
+            self.animationView = AnimationView(contentsOf: URL(string: url!)!)
          }
          
          if filePath != nil {
             print("THIS IS THE ID " + String(viewId) + " " + filePath!)
             let key = self.registrarInstance.lookupKey(forAsset: filePath!)
             let path = Bundle.main.path(forResource: key, ofType: nil)
-            self.animationView = LOTAnimationView(filePath: path!)
+            self.animationView = AnimationView(filePath: path!)
          }
          
          let loop = argsDict["loop"] as? Bool ?? false
